@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">yalla jeye</string>
+    <string name="facebook_app_id">492549005936515</string>
+    <string name="fb_login_protocol_scheme">fb492549005936515</string>
+    <string name="facebook_client_token">888138fb6e013bccb2ef27839922efe5</string>
+</resources>
