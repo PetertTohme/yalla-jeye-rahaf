@@ -19,16 +19,6 @@ class OrderModel {
     createdAt = json['createdAt']??"";
   }
 
-  // Map<String, dynamic> toJson() {
-  //   final Map<String, dynamic> data = new Map<String, dynamic>();
-  //   data['id'] = this.id;
-  //   data['orderNumber'] = this.orderNumber;
-  //   data['orderDetails'] = this.orderDetails;
-  //   data['orderStatus'] = this.orderStatus;
-  //   data['deliveryPrice'] = this.deliveryPrice;
-  //   data['createdAt'] = this.createdAt;
-  //   return data;
-  // }
 }
 
 class CancelOrderReasonModel {
@@ -42,10 +32,4 @@ class CancelOrderReasonModel {
     stauts = json['stauts']??"Not Found";
   }
 
-  // Map<String, dynamic> toJson() {
-  //   final Map<String, dynamic> data = new Map<String, dynamic>();
-  //   data['id'] = this.id;
-  //   data['stauts'] = this.stauts;
-  //   return data;
-  // }
 }
