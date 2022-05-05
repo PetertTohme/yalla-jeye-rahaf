@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,10 +9,11 @@ import 'package:yallajeye/providers/homePage.dart';
 import 'package:yallajeye/providers/order.dart';
 import 'package:yallajeye/providers/user.dart';
 import 'package:yallajeye/screens/auth/signin_screen.dart';
-import 'package:yallajeye/screens/order/location.dart';
-import 'package:yallajeye/screens/order/order_list.dart';
+
 import 'package:yallajeye/screens/settings/addresses/create_update_address.dart';
 import 'package:yallajeye/widgets/custom_alert_dialog.dart';
+
+import 'Loaction_page.dart';
 
 class CustomOrder extends StatefulWidget {
   const CustomOrder({Key key}) : super(key: key);
@@ -359,12 +361,12 @@ getAddressData() async{
                                 if(address.addresses.length==0){
                                   address.isCreateAddress=true;
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (_) => Location()));
+                                      builder: (_) => LocationP()));
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (_) => CreateAddress()));
                                 }else{
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (_) => Location()));
+                                      builder: (_) => LocationP()));
                                 }
 
                                // order.clearFields();
