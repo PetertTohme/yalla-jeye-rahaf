@@ -143,7 +143,7 @@ if(status.isGranted){
             Expanded(
               child: TabBarView(children: [
                 OrderInfo(),
-               OrderTracking(),
+                TrackingOrder(widget.id),
                 ChatPage(
                   peerId: "admin",
                   peerAvatar: "",
