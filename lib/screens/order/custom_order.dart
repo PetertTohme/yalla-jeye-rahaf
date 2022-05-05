@@ -61,6 +61,7 @@ getAddressData() async{
       onWillPop: onBackPressed,
       child: SafeArea(
         child: Scaffold(
+
           resizeToAvoidBottomInset: true,
           // appBar: AppBar(
           //   title: const Text(
@@ -82,7 +83,15 @@ getAddressData() async{
           // ),
           appBar: AppBar(
             leading: IconButton(
-              onPressed: Navigator.of(context).pop,
+              onPressed:  (){
+                showDialog(
+                    context: context,
+                    builder: (context) =>
+                        CustomAlertDialog(title: "Do you want to cancel your order?", content: "", cancelBtnFn: () => Navigator.pop(context, false), confrimBtnFn: (){
+                          Navigator.pop(context);
+                          Navigator.of(context).pop();
+                        }));
+              },
               icon: Icon(Icons.arrow_back, size: 41,
                 color: Color.fromRGBO(254, 212, 48, 1),),
             )
@@ -93,27 +102,23 @@ getAddressData() async{
               pinned: true,
               floating: false,
               backgroundColor: Colors.transparent,
-              leading: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(150)),
-                child: Center(
-                  child: IconButton(
-                    onPressed:  (){
-                      showDialog(
-                      context: context,
-                      builder: (context) =>
-                          CustomAlertDialog(title: "Do you want to cancel your order?", content: "", cancelBtnFn: () => Navigator.pop(context, false), confrimBtnFn: (){
-                            Navigator.pop(context);
-                            Navigator.of(context).pop();
-                          }));
-                         },
-                    icon: Icon(
-                      Icons.clear,
-                      color: yellowColor,
-                      size: 30,
-                    ),
-                  ),
-                ),
+              leading: Center(
+                // child: IconButton(
+                //   onPressed:  (){
+                //     showDialog(
+                //     context: context,
+                //     builder: (context) =>
+                //         CustomAlertDialog(title: "Do you want to cancel your order?", content: "", cancelBtnFn: () => Navigator.pop(context, false), confrimBtnFn: (){
+                //           Navigator.pop(context);
+                //           Navigator.of(context).pop();
+                //         }));
+                //        },
+                //   icon: Icon(
+                //     Icons.clear,
+                //     color: yellowColor,
+                //     size: 30,
+                //   ),
+                // ),
               ),
             )
          ,

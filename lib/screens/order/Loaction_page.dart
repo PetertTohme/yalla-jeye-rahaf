@@ -44,6 +44,11 @@ class _LocationPState extends State<LocationP> {
         MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: Navigator.of(context).pop,
+          icon: Icon(Icons.arrow_back, size: 41,
+            color: Color.fromRGBO(254, 212, 48, 1),),
+        ),
         automaticallyImplyLeading: false,
         title: Text(
           "Location",
